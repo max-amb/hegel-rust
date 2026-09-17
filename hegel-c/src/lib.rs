@@ -63,7 +63,7 @@ pub mod __bench {
         crate::native::core::state::biased_integer_sample(
             ic,
             rng,
-            crate::native::core::GenerationParameters::default(),
+            crate::native::core::state::IntegerGenerationParameters::default(),
         )
         .unwrap()
     }
@@ -77,7 +77,12 @@ pub mod __bench {
     }
 
     pub fn biased_float_sample(fc: &FloatChoice, rng: &mut EngineRng) -> f64 {
-        crate::native::core::state::biased_float_sample(fc, rng).unwrap()
+        crate::native::core::state::biased_float_sample(
+            fc,
+            rng,
+            crate::native::core::state::FloatGenerationParameters::default(),
+        )
+        .unwrap()
     }
 }
 
