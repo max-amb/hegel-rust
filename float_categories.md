@@ -1,0 +1,18 @@
+  - Endpoints
+  - Near zero ($(-0.1, 0.1)$) <- Needs to be generated s.t. we don't overvalue the larger magnitude floats
+  - Subnormals ($(0, MIN_POSITIVE) \bigcup (-MIN_POSITIVE, 0)$)
+  - Near one ($(1-2^{-l}, 1+2^{-l})$)
+  - Near minus one ($(-1-2^{-l}, -1+2^{-l})$)
+  - Only integers (uniformly)
+  - Only half integers (uniformly) ($0.5, 1.5, \dots$)
+  - Near `{MAX, MIN}` ($[2^{1023}, MAX] \bigcup [MIN, -2^{1023}]$) for add
+  - Near `{MAX, MIN}` (so sqrt `{MAX, MIN}`) for mul
+  - Near $\pm$ sqrt`MIN_POSITIVE` for mul
+  - `NaN`'s (any)
+  - $\pm \infty$
+  - `{MAX, MIN}`
+  - `{MAX, MIN}_EXACT_INTEGER`
+  - $\pm 0$
+  - Binade edges
+  - Non-dyadic values
+  - $U(a, b)$ <- The continuous uniform distribution <- Needs special handling to not lump together
