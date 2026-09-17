@@ -16,3 +16,4 @@
   - Binade edges
   - Non-dyadic values
   - $U(a, b)$ <- The continuous uniform distribution <- Needs special handling to not lump together
+  - Log-uniform over the range (every binade the range touches equally likely, floored at one ulp of a finite top bound)
