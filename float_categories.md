@@ -17,4 +17,4 @@
   - Non-dyadic values
   - The default (the mixture's remainder, and where a ruled-out category's mass lands): a coin flip between
     - $U(a, b)$, the continuous uniform (the lex draw, clamped, when a bound is infinite)
-    - Log-uniform over the range (every binade the range touches equally likely, floored at one ulp of a finite top bound)
+    - Log-uniform over the range (every binade the range touches equally likely, down to the smallest admitted magnitude)
