@@ -3,8 +3,8 @@
   - Subnormals ($(0, MIN_POSITIVE) \bigcup (-MIN_POSITIVE, 0)$)
   - Near one ($(1-2^{-l}, 1+2^{-l})$)
   - Near minus one ($(-1-2^{-l}, -1+2^{-l})$)
-  - Only integers (uniformly)
-  - Only half integers (uniformly) ($0.5, 1.5, \dots$)
+  - Only integers (log-uniform over the binades of magnitude)
+  - Only half integers (log-uniform over the binades of magnitude) ($0.5, 1.5, \dots$)
   - Near `{MAX, MIN}` ($[2^{1023}, MAX] \bigcup [MIN, -2^{1023}]$) for add
   - Near `{MAX, MIN}` (so sqrt `{MAX, MIN}`) for mul
   - Near $\pm$ sqrt`MIN_POSITIVE` for mul
@@ -15,5 +15,6 @@
   - $\pm 0$
   - Binade edges
   - Non-dyadic values
-  - $U(a, b)$ <- The continuous uniform distribution <- Needs special handling to not lump together
-  - Log-uniform over the range (every binade the range touches equally likely, floored at one ulp of a finite top bound)
+  - The default (the mixture's remainder, and where a ruled-out category's mass lands): a coin flip between
+    - $U(a, b)$, the continuous uniform (the lex draw, clamped, when a bound is infinite)
+    - Log-uniform over the range (every binade the range touches equally likely, floored at one ulp of a finite top bound)
